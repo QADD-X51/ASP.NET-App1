@@ -10,7 +10,6 @@
         public string EngineType { get; set; }
         public string FuelType { get; set; }
         public string Drivetrain { get; set; }
-        public int GearCount { get; set; }
         public int Weight { get; set; }
         public int Mileage { get; set; }
         public float Price { get; set; }
