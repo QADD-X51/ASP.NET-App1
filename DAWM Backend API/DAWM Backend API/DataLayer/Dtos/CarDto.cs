@@ -1,6 +1,8 @@
-﻿namespace DAWM_Backend_API.DataLayer.Models
+﻿using DAWM_Backend_API.DataLayer.Models;
+
+namespace DAWM_Backend_API.DataLayer.Dtos
 {
-    public class Car
+    public class CarDto
     {
         public int Id { get; set; }
         public string ModelName { get; set; }
@@ -18,9 +20,9 @@
         public bool Sold { get; set; }
 
         public int MakerId { get; set; }
-        public Maker Maker { get; set; }
+        public MakerDto Maker { get; set; }
 
         public int UserId { get; set; }
-        public User User { get; set; }
+        public UserDto User { get; set; }
     }
 }

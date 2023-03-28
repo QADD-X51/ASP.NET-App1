@@ -1,4 +1,5 @@
-﻿using Services;
+﻿using DAWM_Backend_API.Core.Services;
+using DAWM_Backend_API.DataLayer.Repositories;
 
 namespace DAWM_Backend_API.Settings
 {
@@ -13,5 +14,14 @@ namespace DAWM_Backend_API.Settings
             AddServices(applicationBuilder.Services);
         }
 
+        private static void AddServices(IServiceCollection services)
+        {
+            services.AddScoped<UserService>();
+        }
+
+        private static void AddRepositories(IServiceCollection services)
+        {
+            services.AddScoped<UserRepo>();
+        }
     }
 }

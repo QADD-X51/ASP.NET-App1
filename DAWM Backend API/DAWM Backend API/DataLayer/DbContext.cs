@@ -61,6 +61,7 @@ namespace DAWM_Backend_API.DataLayer
                 Price = 14495,
                 Negotiable = false,
                 Description = "Came with the signature golden rims seen in the rally version.",
+                Sold = false,
 
                 UserId = 101,
                 User = new User
@@ -92,6 +93,7 @@ namespace DAWM_Backend_API.DataLayer
                 Price = 9435,
                 Negotiable = true,
                 Description = "Still cool, even without it's signature wing.",
+                Sold = false,
 
                 UserId = 102,
                 User = new User
@@ -122,7 +124,8 @@ namespace DAWM_Backend_API.DataLayer
                 Mileage = 52468,
                 Price = 21615,
                 Negotiable = true,
-                Description = "Even if it's not the twin turb version, this car is legendary.",
+                Description = "Even if it's not the twin turbo version, this car is legendary.",
+                Sold = false,
 
                 UserId = 101,
                 User = new User
@@ -154,6 +157,7 @@ namespace DAWM_Backend_API.DataLayer
                 Price = 16510,
                 Negotiable = true,
                 Description = "Ever wanted to impress the ladies with a Merc? Now you can! Just make sure they don't actually see the car...",
+                Sold = false,
 
                 UserId = 103,
                 User = new User
@@ -185,6 +189,7 @@ namespace DAWM_Backend_API.DataLayer
                 Price = 51284,
                 Negotiable = false,
                 Description = "I hate most BMW, but this one is an exception! Don't let it's compact design fool you, this is a real sports car. This car might not turn heads, but it will smoke cars that would!",
+                Sold = false,
 
                 UserId = 102,
                 User = new User
@@ -215,7 +220,8 @@ namespace DAWM_Backend_API.DataLayer
                 Mileage = 52060,
                 Price = 12055,
                 Negotiable = true,
-                Description = "Even though this particular era of the Camaro was an unremarkable, it was the catalyst that breed the gorgeos Camaros we see today!",
+                Description = "Even though this particular era of the Camaro was unremarkable, it was the catalyst that breed the gorgeos Camaros we see today!",
+                Sold = false,
 
                 UserId = 104,
                 User = new User
@@ -247,6 +253,7 @@ namespace DAWM_Backend_API.DataLayer
                 Price = 22500,
                 Negotiable = false,
                 Description = "Who put a V6 in my mom's car?",
+                Sold = false,
 
                 UserId = 104,
                 User = new User
