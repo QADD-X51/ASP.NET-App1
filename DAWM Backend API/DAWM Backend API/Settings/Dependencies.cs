@@ -17,11 +17,13 @@ namespace DAWM_Backend_API.Settings
         private static void AddServices(IServiceCollection services)
         {
             services.AddScoped<UserService>();
+            services.AddScoped<CarService>();
         }
 
         private static void AddRepositories(IServiceCollection services)
         {
             services.AddScoped<UserRepo>();
+            services.AddScoped<CarRepo>();
         }
     }
 }

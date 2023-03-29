@@ -15,14 +15,14 @@ namespace DAWM_Backend_API.Controllers
             userService = _userService;
         }
 
-        [HttpGet("/get-all")]
+        [HttpGet("/user/get-all")]
         public ActionResult<List<User>> GetAll()
         {
             var returned = userService.GetAll();
             return Ok(returned);
         }
 
-        [HttpGet("/get/{userId}")]
+        [HttpGet("/user/get/{userId}")]
         public ActionResult<User> GetById(int userId)
         {
             var returned = userService.GetById(userId);
@@ -33,7 +33,7 @@ namespace DAWM_Backend_API.Controllers
             return Ok(returned);
         }
 
-        [HttpPost("/add")]
+        [HttpPost("/user/add")]
         public ActionResult<User> AddUser([FromBody] User user)
         {
             if (user == null) return BadRequest("User can't be null!");
@@ -44,7 +44,7 @@ namespace DAWM_Backend_API.Controllers
             return Ok("User added!");
         }
 
-        [HttpDelete("/del/{userId}")]
+        [HttpDelete("/user/del/{userId}")]
         public ActionResult<User> DeleteUserById(int userId)
         {
             if (!userService.DeleteUser(userId))
@@ -52,7 +52,7 @@ namespace DAWM_Backend_API.Controllers
             return Ok("User banished!");
         }
 
-        [HttpPut("/edit/{userId}")]
+        [HttpPut("/user/edit/{userId}")]
         public ActionResult<User> EditUserById(int userId, [FromBody] User newUser)
         {
             if (!userService.EditUser(userId, newUser))
