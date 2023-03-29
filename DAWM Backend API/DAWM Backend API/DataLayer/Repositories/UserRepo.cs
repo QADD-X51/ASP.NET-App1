@@ -39,5 +39,31 @@ namespace DAWM_Backend_API.DataLayer.Repositories
 
             return returned;
         }
+
+        public bool AddUser(User user)
+        {
+            DbContext.Users.Add(user);
+            return true;
+        }
+
+        public bool DeleteUserById(int userId)
+        {
+            return DbContext.Users.Remove(GetById(userId));
+        }
+
+        public bool EditUserById(int userId, User newUser)
+        {
+            if (newUser == null)
+                return false;
+
+            newUser.Id = userId;
+
+            if (!DeleteUserById(userId))
+                return false;
+            if (!AddUser(newUser))
+                return false;
+
+            return true;
+        }
     }
 }

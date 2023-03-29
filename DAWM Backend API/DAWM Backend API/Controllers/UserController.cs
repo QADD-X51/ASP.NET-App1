@@ -32,5 +32,33 @@ namespace DAWM_Backend_API.Controllers
 
             return Ok(returned);
         }
+
+        [HttpPost("/add")]
+        public ActionResult<User> AddUser([FromBody] User user)
+        {
+            if (user == null) return BadRequest("User can't be null!");
+
+            if (!userService.AddUser(user))
+                return BadRequest("Something went wrong adding new user.");
+
+            return Ok("User added!");
+        }
+
+        [HttpDelete("/del/{userId}")]
+        public ActionResult<User> DeleteUserById(int userId)
+        {
+            if (!userService.DeleteUser(userId))
+                return BadRequest("Could not remove user.");
+            return Ok("User banished!");
+        }
+
+        [HttpPut("/edit/{userId}")]
+        public ActionResult<User> EditUserById(int userId, [FromBody] User newUser)
+        {
+            if (!userService.EditUser(userId, newUser))
+                return BadRequest("Something went wrong!");
+
+            return Ok("User modified");
+        }
     }
 }

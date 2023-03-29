@@ -29,5 +29,20 @@ namespace DAWM_Backend_API.Core.Services
 
             return result;
         }
+
+        public bool AddUser(User user)
+        {
+            return _userRepo.AddUser(user);
+        }
+
+        public bool DeleteUser(int userId)
+        {
+            return _userRepo.DeleteUserById(userId);
+        }
+
+        public bool EditUser(int userId, User newUser)
+        {
+            return _userRepo.EditUserById(userId, newUser);
+        }
     }
 }
